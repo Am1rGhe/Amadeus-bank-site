@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Mona Sans", sans-serif;
+    height: 100vh;
+    position: relative;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    height: 100px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    position: absolute;
+    width: 100%;
+
+}
+.navbar__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 22px;
+    font-weight: 500;
+}
+.navbar img{
+    height: 40px;
+    margin-right: 10px;
+
+}
+.navbar__btn{
+    padding: 15px 40px;
+    border-radius: 20px;
+    border: none;
+    color: #fff;
+    background-color: #000000;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.navbar__btn:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.firstPage__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.firstPage__container--left{
+    position: relative;
+}
+.firstPage__container--left img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+}
+.firstPage__container--left h2{
+    padding-top: 420px;
+    color: #fff;
+    margin-left: 40px;
+}
+.form__container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+.form{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    padding: 200px 100px 0px 100px ;
+    transition: all 0.5s ;
+    z-index: 1;
+}
+.form__logIn{
+    opacity: 1;
+}
+.form h2{
+    font-weight: 700;
+    font-size: 30px;
+    color: #171D55;
+    margin-bottom: 10px;
+}
+.form p {
+    color: #999AA3;
+    font-size: 15px;
+    margin-bottom: 35px;
+
+}
+.form__label{
+    font-size: 15px;
+    color: #171D55;
+    margin-bottom: 5px;
+}
+.form__input{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    transform: all 0.6s;
+}
+.form__label::placeholder{
+    color: #bbb;
+}
+.form__input:focus{
+    outline: none;
+    border: 1px solid #000000;
+    outline: none;
+}
+.form__btn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.form__btn:hover{
+    background-color:rgba(0,0,0, 0.7);
+}
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #999AA3; 
+    margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #ccc;
+}
+
+.divider:not(:empty)::before {
+    margin-right: 0.75em;
+}
+.divider:not(:empty)::after {
+    margin-left: 0.75em;
+}
+
+.useless{
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    justify-content: space-between;
+    gap: 10px;
+}
+.useless > button{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #fff;
+    border:1px solid #e2e1e1;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+.useless img{
+    height: 25px;
+    margin-right: 5px;
+}
+.useless > button:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+
+
+
+
+.disabled{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.modal__overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.modal__content{
+    position: fixed;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color:#fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-align: center;
+    height: 200px;
+    width: 450px;
+}
+.modal__content  button{
+    position: absolute;
+    bottom: -20px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.modal__content button:hover{
+    background-color: rgba(0, 0 , 0, 0.7);
+    
+}
+/*************************************************** SECOND PAGE DESIGN  *****************************************/
+
+.secondPage__container{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: #F2F3F7;
+    margin: 0;
+    padding: 60px;
+}
+.bento__grid{
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+}
+
+
+
+.div4{
+    grid-row: 1/ span 4;
+    grid-column: 3;
+    padding: 20px 40px;
+
+}
+
+.div4 h2{
+    margin-bottom: 60px;
+    font-size: 15px;
+}
+
+.adjust--display{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 50px;
+}
+.adjust--display p{
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.converted__displayed{
+    font-size: 40px;
+    border: none;
+    width: 200px;
+    margin-bottom: 80px;
+    font-weight: 400;
+}
+
+
+.converted__displayed:focus{
+    outline: none;
+}
+
+.bento__grid--columns{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+.converted__currency{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #999AA3;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 10px 10px;
+    align-items: center;
+}
+
+
+/* TAKE OF THE ARROWS  */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.div4 > h2{
+    text-align: center;
+}
+
+.converted__currency--logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.converted__currency--logo img{
+    height: 15px;
+}
+
+.div4 button{
+    
+    background-color:#1B7FFF ;
+    color: #fff;
+    width: 100%;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 8px;
+    margin-top: 40px;
+    box-shadow:  0 2px 6px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.div4 button:hover{
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+    background-color: rgba(27, 127, 255,0.8);
+}
+.div4 button:focus{
+    outline: none;
+}
+.div4 > p{
+    color: #B2B2B2;
+    font-size: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+/* DIV2 AKA THE CARD DESIGN DIV */
+
+.div2{
+    grid-row: 1/span 2;
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2F3F7 !important;
+}
+
+.card{
+    width: 90%;
+    height: 70%;
+    border-radius: 8px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.card__inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style:preserve-3d;
+    cursor: pointer;
+}
+
+.card:hover .card__inner{
+    transform: rotateY(180deg);
+}
+
+.card__side{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    backface-visibility: hidden;
+    display: flex; 
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card__side--front{
+    background: linear-gradient(to top right, #2E3192, #1BFFFF);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: #fff;
+    
+}
+.card__side--front--logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    height: 15%;
+    width: 100%;
+}
+.card__side--front--logo img{
+    height: 30px;
+    margin-top: 30px;
+    z-index: 1;
+}
+.visa{
+    height: 20px !important;
+}
+.map-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.3;
+}
+
+.card__side--front h3{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 27px;
+    z-index: 1;
+}
+
+.card__informations--container{
+    display: flex;
+    justify-content: space-between;
+}
+.card__name{
+    display: flex;
+    flex-direction:column;
+    gap: 5px;
+    padding: 0px 15px;
+    margin-top: 0;
+}
+.card__name p{
+    font-size: 10px;
+    font-weight: 300;
+    z-index: 1;
+}
+.card__name h4{
+    font-weight: 500;
+    z-index: 1;
+}
+
+.card__side--back{
+    background: linear-gradient(to top right, #2E3192, #1BFFFF);
+    transform: rotateY(180deg);
+    align-items: center;
+    padding: 20px 40px;
+    gap: 20px;
+}
+.card__side--back p{
+    font-size: 15px;
+    font-weight: 300;
+}
+.card__side--back h3{
+    font-size: 40px;
+}
+
+/* DIV 3 */
+
+.div3{
+    grid-row: 3/ span 2;
+    grid-column: 2;
+    overflow: scroll;
+}
+
+.movements__row{
+    padding:10px 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.movements__type{
+    font-size: 12px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.movements__type--withdrawal{
+    background: linear-gradient(to top right, #662D8C , #ED1E79);
+}
+.movements__type--deposit{
+    background: linear-gradient(to top right , #614385 , #516395);
+}
+
+/* DIV  1 : THE BUTTONS MANIPULATION*/
+
+.div1{
+    grid-row: 1/ span 4;
+    grid-column: 1;
+    display: grid;
+    gap: 20px;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding: 10px 30px ;
+    color: #fff;
+}
+
+/* TOTALLY FORGOT THAT I WILL ADD ANOTHER FORMS  */
+
+.operation{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 8px;
+    align-items: center;
+}
+.div1 form{
+    padding: 0;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 120px 120px;
+    
+    
+}
+.sencondForm__input{
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s;
+}
+.sencondForm__input:focus{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.sencondForm__label{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+.sencondForm__btn{
+    grid-column:  1/-1;
+    width: 100%;
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    background-color: #000000;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.sencondForm__btn:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.operation--transfer{
+    background: linear-gradient(to top right ,#EA8D8D , #A890FE);
+}
+
+/* I MESSED UP HERE SO IM JUST GONNA HARD CODE IT ONE BY ONE  */
+.operation--withdrawal{
+    background: linear-gradient(to top right, #662D8C , #ED1E79);
+}
+.operation--deposit{
+    background: linear-gradient(to top right , #614385 , #516395) ;
+}
+.operation--withdrawal label,.operation--deposit label{
+    grid-row: 3;
+}
+.operation--withdrawal button,.operation--deposit button{
+    grid-row: 2;
+    grid-column: 2;
+}
+.operation--withdrawal input, .operation--deposit input{
+    grid-row: 2 ;
+    grid-column: 1;
+}
+.operation button:focus{
+    outline: none;
+}
+.secondPage__navbar{
+    top: 10px;
+    height: 50px;
+    width: 90%;
+
+}
+
+
+.hidden{
+    display:none !important;
+}

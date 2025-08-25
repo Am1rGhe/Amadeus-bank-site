@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Aureus Bank</title>
+</head>
+<body>
+    
+    <main>
+        
+        <div class="firstPage__container  ">
+            <nav class="firstNavbar navbar ">
+                <div class="navbar__logo">
+                    <img  src="./assets/favicon.png" alt="Bank-logo">
+                    <p>Aureus Bank</p>
+                </div>
+                <button class="navbar__btn navbar__btn--switch ">Sign in</button>
+        
+            </nav>
+            <div class="firstPage__container--left">
+                <img src="./assets/side-image.jpg" alt=side-image"">
+                <h2>Aureus Bank — Where trust meets innovation.</h2>
+            </div>
+            <div class="form__container">
+                <form class="form form__logIn">
+                    <h2>Welcome Back to Aureus!</h2>
+                    <p>Sign in Account</p>
+                    <label class="form__label">Your username</label>
+                    <input class="form__input form__input--username" type="text" placeholder="Ex: Amir Ghouari => the username is : ag">
+                    <label class="form__label">PIN</label>
+                    <input type="password" maxlength="4" class="form__input form__input--pin" placeholder="Enter your PIN Ex :1111">
+                    <button class="form__btn form__btn--login">Login</button>
+                    <label class="form__label divider">instan Login</label>
+    
+                    <div class="useless">
+                        <button class="sorry">
+                            <img src="./assets/google.svg" alt="google">
+                            Continue with Google
+                        </button>
+                        <button class="sorry">
+                            <img src="./assets/facebook.svg" alt="facebook">Continue with Facebook
+                        </button>
+                    </div>
+    
+                </form>
+                <!-- NOW THE SIGN IN FORM -->
+                <form class="form form__signIn disabled">
+                    <h2>Join the Aureus Family!</h2>
+                    <p>Fill in the details to start your adventure</p>
+                    <label class="form__label">First Name</label>
+                    <input type="text" class="form__input form__input--firstName" placeholder="Enter your first name">
+                    <label class="form__label">Name</label>
+                    <input type="text" class="form__input form__input--name" placeholder="Enter your name">
+                    <label for="form__label">Choose your PIN</label>
+                    <input type="password" placeholder="Only 4 digits or characters" maxlength="4" class="form__input form__input--pinChoice">
+                    <label class="form__label">Confirm your PIN</label>
+                    <input type="password" placeholder="Confirm your PIN" class="form__input form__input--pinConfirm">
+
+                    <button class="form__btn form__btn--signIn">Create Account</button>
+                    
+                </form>
+
+                <!-- THESE ARE THE FIXED ELEMENTS TO ADD  -->
+                <!-- <div class="modal__overlay hidden "></div> -->
+
+
+                <div class="modal__content modal__content--sorry hidden">
+                    <p>😅 This functionality isn't available yet!</p>
+                    <button class="form__btn modal--close " >Close</button>
+                </div>
+
+                <!-- <div class="modal__content modal__content--wrong hidden">
+                    <p>⚠️ Oops! Something doesn’t look right. Please check your details.</p>
+                    <button class="form__btn WrongInfo--close ">Close</button>
+                </div> -->
+
+                <div class="modal__content modal__content--congrats hidden ">
+                    <p>🎉 Congratulations <span class="modal--firstname "></span> ! Your account has been created successfully.</p>
+                    <button class="form__btn modal--close">Close</button>
+                </div>
+
+
+            </div>
+            
+
+        </div>
+        <!-- SECOND PAGE  -->
+        <div class="secondPage__container hidden">
+            <div class="secondPage__navbar">
+
+                <nav class="secondPage__navbar navbar">
+                    <h2>Your <span style="color: #1B7FFF;">money</span>, your <span style="color: #1B7FFF;">moves.</span></h2>
+                    <button class="navbar__btn navbar__btn--logout">Log out</button>
+                </nav>
+                
+                
+            </div>
+            
+
+            <div class="bento__grid">
+
+                <div class="div1 bento__grid--columns">
+                    <div class="operation operation--transfer">
+                        <h3>Make a transfer</h3>
+                        <form class="second__form form--transfer" >
+                            <input type="text" class="sencondForm__input input--to">
+                            <input type="number"  class="sencondForm__input input--amount--transfer">
+                            <label class="sencondForm__label">To</label>
+                            <label class="sencondForm__label">Amount</label>
+                            <button class="sencondForm__btn sencondForm__btn--transfer">Transfer</button>
+
+                        </form>
+                    </div>
+
+
+                    <div class="operation operation--withdrawal">
+                        <h3>Make a withdrawal</h3>
+                        <form class="second__form form--withdrawal" >
+                            <input type="number"  class="sencondForm__input input--amount--withdrawal">
+                            <label class="sencondForm__label">Amount</label>
+                            <button class="sencondForm__btn sencondForm__btn--withdraw">Withdraw</button>
+
+                        </form>
+                    </div>
+
+
+                    <div class="operation operation--deposit">
+                        <h3>Make a deposit</h3>
+                        <form class="second__form form--deposit" >
+                            <input type="text" class="sencondForm__input input--deposit">
+                            <input type="number"  class="sencondForm__input input__amount--deposit">
+                            <label class="sencondForm__label">Amount</label>
+                            <button class="sencondForm__btn sencondForm__btn--deposit">Confirm</button>
+
+                        </form>
+                    </div>
+
+                    
+
+                </div>
+
+
+
+                <div class="div2 bento__grid--columns" >
+                    <div class="card">
+                        <div class="card__inner">
+                            <div class="card__side card__side--front">
+                                <img src="./assets/map.png" class="map-overlay" alt="map-overlay">
+                                <div class="card__side--front--logo">
+                                    <img src="./assets/chip.png" alt="chip">
+                                    <img src="./assets/visa.png" alt="visa" class="visa">
+                                </div>
+                                <h3>**** **** **** <span class="card--pin">0000</span></h3>
+                                <div class="card__informations--container">
+                                    <div class="card__name">
+                                        <p>CARD HOLDER</p>
+                                        <h4 class="card--name">OWNER'S NAME</h4>
+                                    </div>
+                                    <div class="card__name">
+                                        <p>VALID TILL</p>
+                                        <h4>01/30</h4>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="card__side card__side--back">
+                                <p>Available balance</p>
+                                <h3>$ <span class="card--amount">00.00</span></h3>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="div3 bento__grid--columns">
+                    <div class="movements__row">
+                        <div class="movements__type movements__type--withdrawal">2 withdrawal</div>
+                        <div class="movements__value">$0000</div>
+                    </div>
+
+                    <div class="movements__row">
+                        <div class="movements__type movements__type--deposit">1 deposit</div>
+                        <div class="movements__value">$0000</div>
+                    </div>
+                </div>
+
+                <!-- FOURTH SLIDE -->
+                <div class="div4 bento__grid--columns">
+                    <h2>Convert your currency</h2>
+                    <div class="adjust--display">
+                        <p>$</p>
+                        <input type="number" class="converted__displayed ">
+                    </div>
+                    
+                    <div class="converted__currency">
+                        <div class="converted__currency--logo">
+                            <img src="./assets/united-states-of-america.png" alt="usa">
+                            <p>USD</p>
+                        </div>
+                        <p style="color: #B2B2B2;">-$<span class="converted__currency--usd">0</span></p>
+                    </div>
+                    <div class="converted__currency">
+                        <div class="converted__currency--logo">
+                            <img src="./assets/european.png" alt="eur">
+                            <p>EUR</p>
+                        </div>
+                        <p>+&euro;<span class="converted__currency--eur">0</span> </p>
+                    </div>
+                    <button class="div4--btn">Convert</button>
+                    <p>Highly secured and encrypted by Aureus Bank</p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="modal__content modal__content--wrong hidden">
+            <p>⚠️ Oops! Something doesn’t look right. Please check your details.</p>
+            <button class="form__btn WrongInfo--close ">Close</button>
+        </div>
+        <div class="modal__overlay hidden "></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
