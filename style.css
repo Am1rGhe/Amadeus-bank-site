@@ -608,3 +608,47 @@ input[type=number] {
 .hidden{
     display:none !important;
 }
+
+
+/* MEDIA STYLING  */
+@media (max-width: 799px) {
+    .firstPage__container{
+        width: 100%;
+    }
+    .navbar{
+        width: 100%;
+    }
+    .firstPage__container--left{
+        display: none;
+    }
+    .secondPage__container{
+        height: 100%;
+        width: 100%;
+    }
+
+    .secondPage__navbar{
+        width: 100%;
+    }
+    .bento__grid{
+        width: 90%;
+        grid-template-columns: 1fr ;
+        gap: 20px;
+        grid-template-rows: auto;
+        height: 100vh;
+
+    }
+    .div1, .div2, .div3, .div4 {
+        grid-column: 1 / -1;
+        
+    }
+    .div2 { grid-row: 1;
+        height: 300px;
+        position: relative;
+    }   
+    .div3 { grid-row: auto;
+        height: 300px;
+    }   
+    .div1 { grid-row: auto}  
+    .div4 { grid-row: auto}
+
+}
